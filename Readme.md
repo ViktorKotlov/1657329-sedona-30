@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Viktor Kotlov](https://up.htmlacademy.ru/htmlcss/30/user/1657329).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Дроганов](https://htmlacademy.ru/profile/dmdragon).
 
 ---
 
