@@ -1,0 +1,31 @@
+/* Fonts */
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: url("../fonts/PTSans.woff2");
+    src: url("../fonts/PTSans.woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: url("../fonts/PTSans-Bold.woff2");
+    src: url("../fonts/PTSans-Bold.woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-light-black: #333333;
+    --basic-extra-light-black: #666666;
+    --basic-white: #FFFFFF;
+    --basic-blue: #81B3D2;
+    --basic-gray: #A9A9A9;
+    --basic-light-gray: #EEEEEE;
+    --basic-extra-light-gray: #F2F2F2;
+    --basic-brown: #766357;
+}
