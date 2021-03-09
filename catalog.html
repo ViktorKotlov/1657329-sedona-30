@@ -1,139 +1,195 @@
 <!DOCTYPE html>
-<html  class="page" lang="ru">
+<html class="page" lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/icons/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 
 <body class="page-body">
-  <header class="main-header">
+  <header class="main-header container">
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></li>
+        <li class="site-navigation__item"><a href="blank.html">Информация</a></li>
+        <li class="site-navigation__item"><a href="blank.html">Фото и видео</a></li>
       </ul>
-      <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="138" height="70" alt="logotip"></a>
+      <a class="main-header-logo">
+        <img src="img/logo.svg" width="138" height="70" alt="logotip">
+      </a>
       <ul class="site-navigation">
-        <li><a href="blank.html">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
+        <li class="site-navigation__item"><a href="blank.html">Карта штата</a></li>
+        <li class="site-navigation__item"><a class="active" href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="parametrs">
+    <section class="parametrs container">
       <h2 class="hidden">Параметры жилья</h2>
       <form class="parametrs-form" action="https://echo.htmlacademy.ru/" method="POST">
-        <fieldset class="parametrs-form-infrastructure">
-          <legend class="parametrs-title">Инфраструктура:</legend>
-          <ul class="parametrs-infrastructure-list">
-            <li class="infrastructure-item">
-              <input type="checkbox" name="pool" id="filter-pool" checked>
-              <label for="filter-pool">Бассейн</label>
-            </li>
-            <li class="infrastructure-item">
-              <input type="checkbox" name="parking" id="filter-parking">
-              <label for="filter-parking">Парковка</label>
-            </li>
-            <li class="infrastructure-item">
-              <input type="checkbox" name="wi-fi" id="filter-wi-fi">
-              <label for="filter-wi-fi">Wi-fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="parametrs-form-type">
-          <legend class="parmetrs-title">Тип жилья:</legend>
-          <ul class="parametrs-type-list">
-            <li class="type-item">
-              <input type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">Гостиница</label>
-            </li>
-            <li class="type-item">
-              <input type="checkbox" name="motel" id="filter-motel" checked>
-              <label for="filter-motel">Мотель</label>
-            </li>
-            <li class="type-item">
-              <input type="checkbox" name="apartment" id="filter-apartment" checked>
-              <label for="filter-apartment">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="parametrs-form-cost">
-          <legend class="parametrs-title">Стоимость в сутки (Р):</legend>
-           <!--добавить диапазон от 0 до 3000 р-->
-          <input type="range" min="0" max="5000" step="100">
-        </fieldset>
-        <button type="submit">Показать</button>
-      </form>
+        <div class="parametrs-form__container">
+          <fieldset class="parametrs-form-infrastructure fieldset">
+            <legend class="parametrs-title">Инфраструктура:</legend>
+            <ul class="parametrs-infrastructure-list">
+              <li class="infrastructure-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="pool" id="filter-pool"
+                  checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li class="infrastructure-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li class="infrastructure-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="parametrs-form-type fieldset">
+            <legend class="parametrs-title">Тип жилья:</legend>
+            <ul class="parametrs-type-list">
+              <li class="type-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="hotel" id="filter-hotel"
+                  checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="type-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="motel" id="filter-motel"
+                  checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li class="type-item">
+                <input class="filter-input-checkbox visually-hidden" type="checkbox" name="apartment"
+                  id="filter-apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="parametrs-form__container-cost">
+
+          <form action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filter-cost">
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="range-cost">
+                <div class="range-price">
+                  <div class="range-price__min-price">
+                    <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="range-price__max-price">
+                    <label class="max-price">до<input type="number" name="max-price" value="3000"> </label>
+                  </div>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+              </div>
+            </fieldset>
+            <button class="parametrs-form__container-cost__button" type="submit">Показать</button>
+          </form>
+
+
     </section>
-    <section class="result-block">
+    <section class="result-block container">
       <h2 class="hidden">Результат поиска</h2>
       <div class="result-block-sorting">
-        <!--доделать////////////////////////////////////////////////////////////////-->
-        <p class="">Найдено:<span>3</span></p>
-        <ul>
-          <li><p>Сортировка:</p></li>
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По рейтингу</a></li>
-        </ul>
-        <ul>
-          <li><a href="#"></a></li><!--добавить фото стрелочек-->
-          <li><a href="#"></a></li>
+        <p class="result-block-sorting__text">Найдено:<span> 3</span></p>
+        <span class="result-block-sorting__span">Сортировка:</span>
+        <ul class="result-block-sorting__list">
+          <li class="result-block-sorting__item"><a href="#">По цене</a></li>
+          <li class="result-block-sorting__item"><a href="#">По типу</a></li>
+          <li class="result-block-sorting__item"><a href="#">По рейтингу</a></li>
+          <li class="no-item arrow-up"><button class="no-item__button up-dir">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+              </svg>
+            </button></li>
+          <li class="no-item arrow-down"><button class="no-item__button down-dir ">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" fill="#81B3D2" />
+              </svg>
+            </button></li>
         </ul>
       </div>
-      <ul>
-        <li>
+      <ul class="result-block__list">
+        <li class="result-block__item">
+
           <img src="img/catalog-pic-1.jpg" width="135" height="90" alt="hotel Amara Resort">
-          <a href="#">
-            <h3>Amara Resort & Spa</h3>
-          </a>
-          <p>Гостиница От 4000 Р.</p>
-          <button type="submit">Подробнее</button>
-          <button type="submit">Забронировать</button>
-          <div>
-            <img src="img/star.svg" width="18" height="17" alt="star">
-            <p>Рейтинг: 8,5</p>
+          <div class="result-block__item__block-description">
+            <a href="#">
+              <h3>Amara Resort & Spa</h3>
+            </a>
+            <table class="table__text">
+              <tr>
+                <td>Гостиница</td>
+                <td class="rightcol"> От 4000 Р.</td>
+              </tr>
+            </table>
+            <button class="button-result-block button_description" type="submit">Подробнее</button>
+            <button class="button-result-block button_reserve" type="submit">Забронировать</button>
+          </div>
+          <div class="result-block__item__block-rating">
+            <div class="result-block__item__block-rating__star"></div>
+            <p class="result-block__item__block-rating__star__text">Рейтинг: 8,5</p>
           </div>
         </li>
-        <li>
+        <li class="result-block__item">
           <img src="img/catalog-pic-2.jpg" width="135" height="90" alt="motel Desert Quail Inn">
-          <a href="#">
-            <h3>Desert Quail Inn</h3>
-          </a>
-          <p>Гостиница От 3000 Р.</p>
-          <button type="submit">Подробнее</button>
-          <button type="submit">Забронировать</button>
-          <div>
-            <img src="img/star.svg" width="18" height="17" alt="star">
-            <p>Рейтинг: 8,9</p>
+          <div class="result-block__item__block-description">
+            <a href="#">
+              <h3>Desert Quail Inn</h3>
+            </a>
+            <table class="table__text">
+              <tr>
+                <td>Мотель</td>
+                <td class="rightcol"> От 3000 Р.</td>
+              </tr>
+            </table>
+            <button class="button-result-block button_description" type="submit">Подробнее</button>
+            <button class="button-result-block button_reserve" type="submit">Забронировать</button>
+          </div>
+          <div class="result-block__item__block-rating">
+            <div class="result-block__item__block-rating__star"></div>
+            <p class="result-block__item__block-rating__star__text">Рейтинг: 8,9</p>
           </div>
         </li>
-        <li>
+        <li class="result-block__item">
           <img src="img/catalog-pic-3.jpg" width="135" height="90" alt="apartment Villas at Poco Diablo">
-          <a href="#">
-            <h3>Villas at Poco Diablo</h3>
-          </a>
-          <p>Гостиница От 2000 Р.</p>
-          <button type="submit">Подробнее</button>
-          <button type="submit">Забронировать</button>
-          <div>
-            <!--Оформить звезды и текст-->
-            <img src="img/star.svg" width="18" height="17" alt="star">
-            <p>Рейтинг: 9,2</p>
+          <div class="result-block__item__block-description">
+            <a href="#">
+              <h3>Villas at Poco Diablo</h3>
+            </a>
+            <table class="table__text">
+              <tr>
+                <td>Апартаменты</td>
+                <td class="rightcol"> От 2000 Р.</td>
+              </tr>
+            </table>
+            <button class="button-result-block button_description" type="submit">Подробнее</button>
+            <button class="button-result-block button_reserve" type="submit">Забронировать</button>
+          </div>
+          <div class="result-block__item__block-rating">
+            <div class="result-block__item__block-rating__star"></div>
+            <p class="result-block__item__block-rating__star__text">Рейтинг: 9,2</p>
           </div>
         </li>
       </ul>
+
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer main-footer__catalog  container">
     <section class="footer-contacts">
       <h2 class="hidden">Контакты</h2>
       <p>#VISITSEDONA</p>
@@ -143,22 +199,44 @@
       <h2 class="hidden">Соцсети</h2>
       <ul>
         <li>
-          <a class="social-button" href="#"><img src="img/twitter.svg" width="17" height="17" alt="">Twitter</a>
+          <a class="social-button" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
+                fill="white" />
+            </svg>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="">Facebook</a>
+          <a class="social-button" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            </svg>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#"><img src="img/youtube.svg" width="20" height="16" alt="">YouTube</a>
+          <a class="social-button" href="#">
+            <span class="visually-hidden">YouTube</span>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                fill="white" />
+            </svg>
+          </a>
         </li>
       </ul>
     </section>
     <section class="footer-copyright">
       <h2 class="hidden">Копирайт</h2>
-      <a class="footer-copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">
+      <div class="footer-copyright__block">
         <p>Website by</p>
-        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="logo HTML">
-      </a>
+        <a class="footer-copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">
+
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="logo HTML">
+        </a>
+      </div>
     </section>
   </footer>
 </body>
