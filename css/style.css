@@ -765,17 +765,10 @@ ul .result-block-sorting__item:first-child a {
   height: 11px;
   margin: 0;
   padding-top: 8px;
-  background-color: var(--white)-;
+  background-color: var(--white);
   border: none;
   background-repeat: no-repeat;
 }
-
-.up-dir {
-  /* margin-left: 498px;
-  margin-top: 36px; */
-}
-
-/* .up-dir path {fill: red;} - меняю цвет SVG */
 
 .result-block__list {
   list-style: none;
