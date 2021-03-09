@@ -74,33 +74,30 @@
           </fieldset>
         </div>
         <div class="parametrs-form__container-cost">
-
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter-cost">
-              <legend>Стоимость в сутки (Р):</legend>
-              <div class="range-cost">
-                <div class="range-price">
-                  <div class="range-price__min-price">
-                    <label class="min-price">от <input type="number" name="min-price" value="0"></label>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="range-price__max-price">
-                    <label class="max-price">до<input type="number" name="max-price" value="3000"> </label>
-                  </div>
+          <fieldset class="filter-cost">
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="range-cost">
+              <div class="range-price">
+                <div class="range-price__min-price">
+                  <label class="min-price">от <input type="number" name="min-price" value="0"></label>
                 </div>
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="toggle" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="separator"></div>
+                <div class="range-price__max-price">
+                  <label class="max-price">до<input type="number" name="max-price" value="3000"> </label>
                 </div>
               </div>
-            </fieldset>
-            <button class="parametrs-form__container-cost__button" type="submit">Показать</button>
-          </form>
-
-
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="parametrs-form__container-cost__button" type="submit">Показать</button>
+        </div>
+      </form>
     </section>
     <section class="result-block container">
       <h2 class="hidden">Результат поиска</h2>
