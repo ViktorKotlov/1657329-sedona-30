@@ -29,7 +29,7 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
+  <main class="main container">
     <h1 class="hidden">Sedona - сайт поиска жилья</h1>
     <section class="preview">
       <h2 class="hidden">Превью</h2>
@@ -112,6 +112,24 @@
         <img src="img/map.png" width="1200" height="593" alt="map">
       </div>
     </section>
+    <section class="search-form container">
+      <h2 class="hidden">Форма поиска гостиницы</h2>
+      <div class="search-form-block">
+      <form action="https://echo.htmlacademy.ru/" method="POST">
+        <label class="search-date-in text" for="date-in">Дата заезда</label>
+        <input class="search-date-in text search-form__input" type="text" name="date-in" id="date-in" value="24 апреля 2017">
+        <!--добавить календарь-->
+        <label class="search-date-out text" for="date-out">Дата выезда</label>
+        <input class="search-date-out text search-form__input" type="text" name="date-out" id="date-out" value="4 июля 2017">
+        <!--добавить календарь-->
+        <label class="search-adult text" for="adult">Взрослые</label>
+        <input class="search-adult text search-form__input" type="number" name="adult" id="adult" value="2">
+        <label class="search-children text" for="children">Дети</label>
+        <input class="search-children text search-form__input" type="number" name="children" id="children" value="0">
+        <button class="search-button" type="submit">Найти</button>
+      </form>
+      </div>
+    </section>
   </main>
   <footer class="main-footer container">
     <section class="footer-contacts">
@@ -163,22 +181,7 @@
       </div>
     </section>
   </footer>
-  <section class="search-form container">
-    <h2 class="hidden">Форма поиска гостиницы</h2>
-    <form action="https://echo.htmlacademy.ru/" method="POST">
-      <label class="search-date-in text" for="date-in">Дата заезда</label>
-      <input class="search-date-in text" type="text" name="date-in" id="date-in" value="24 апреля 2017">
-      <!--добавить календарь-->
-      <label class="search-date-out text" for="date-out">Дата выезда</label>
-      <input class="search-date-out text" type="text" name="date-out" id="date-out" value="4 июля 2017">
-      <!--добавить календарь-->
-      <label class="search-adult text" for="adult">Взрослые</label>
-      <input class="search-adult text" type="number" name="adult" id="adult" value="2">
-      <label class="search-children text" for="children">Дети</label>
-      <input class="search-children text" type="number" name="children" id="children" value="0">
-      <button class="search-button" type="submit">Найти</button>
-    </form>
-  </section>
+
 </body>
 
 </html>
