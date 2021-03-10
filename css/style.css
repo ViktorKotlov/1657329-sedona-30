@@ -369,7 +369,9 @@ p {
   background-color: var(--brown-hover);
 }
 
-
+.map {
+  position: relative;;
+}
 
 /* Footer */
 
@@ -475,7 +477,7 @@ p {
   width: 568px;
   height: max-content;
   background-color: var(--white);
-  bottom: 346px;
+  top: 0px;
   left: 316px;
   z-index: 2;
 }
