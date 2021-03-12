@@ -118,7 +118,10 @@ p {
   position: relative;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
+.main-header a:hover {
 
+
+}
 .main-navigation {
   display: flex;
   margin-bottom: -14px;
@@ -367,12 +370,18 @@ p {
   line-height: 26px;
   font-weight: bold;
   border: none;
+  outline: none;
 }
 
 .button-search:hover, .button-search:focus {
   background-color: var(--brown-hover);
 }
-
+ .button-search:active {
+  background-color: #503E33;
+}
+.button-search:active span {
+  opacity: 0.3;
+}
 .map {
   position: relative;
   ;
@@ -450,16 +459,20 @@ p {
   height: 48px;
   background-color: var(--blue);
   color: inherit;
+  outline: none;
 }
 
 .social-button:hover, .social-button:focus, .search-button:hover, .search-button:focus {
   background-color: var(--blue-hover);
 }
-
-.social-button:active {
-  background-color: var(--blue-active);
-  /* добавить цвет иконке при нажатии */
+.social-button:active, .search-button:active {
+  background-color:var(--blue-active);
 }
+ .search-button:active span, .social-button:active svg {
+  opacity: 0.3;
+}
+
+
 
 .footer-copyright {
   display: flex;
@@ -475,6 +488,9 @@ p {
 .footer-copyright-button {
   margin-left: 8px;
 }
+.footer-copyright-button:hover svg path, .footer-copyright-button:focus svg path {fill: var(--blue);}
+.footer-copyright-button:active svg path {fill: #231F20;
+opacity: 0.3;}
 
 .search-form {
   position: absolute;
@@ -508,6 +524,7 @@ p {
   text-align: center;
   padding-top: 7px;
   padding-bottom: 6px;
+  outline: none;
 }
 
 .search-form-block__wrapper button {
@@ -519,18 +536,21 @@ p {
   padding: 0;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .adult .minus, .children .minus {
   position: absolute;
   top: 7px;
   right: 85px;
+  outline: none;
 }
 
 .adult .plus, .children .plus {
   position: absolute;
   top: 11px;
   right: 9px;
+  outline: none;
 }
 
 .search-form-block label {
@@ -567,6 +587,15 @@ input.search-date-in, input.search-date-out {
   background-color: var(--extra-light-gray);
   border: none;
   padding: 4px 9px 7px 12px;
+  outline: none;
+}
+input.search-date-in:hover, input.search-date-out:hover {
+  background-color: #EBEBEB;
+}
+input.search-date-in:focus, input.search-date-out:focus {
+  background: #FFFFFF;
+border: 2px solid #E5E5E5;
+outline-offset: -4px;
 }
 
 input.search-adult, input.search-children {
@@ -624,7 +653,10 @@ input.search-adult, input.search-children {
 
 .parametrs-type-list .type-item {
   padding-left: 2px;
+
 }
+.parametrs-type-list  label {cursor: pointer;}
+
 
 .infrastructure-item label, .type-item {
   position: relative;
@@ -643,6 +675,16 @@ input.search-adult, input.search-children {
   border: 2px solid var(--white);
   border-radius: 13%;
 }
+.filter-input-checkbox:not(:checked):disabled+label::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #6a6a6a;
+  border-radius: 13%;
+}
 
 .filter-input-checkbox:checked+label::after {
   content: "";
@@ -652,6 +694,15 @@ input.search-adult, input.search-children {
   width: 27px;
   height: 23px;
   background-image: url(..//img/checkbox-on.svg);
+}
+.filter-input-checkbox:checked:disabled +label::after {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url(..//img/checkbox-disabled.svg);
 }
 
 .parametrs-form__container-cost {
@@ -761,7 +812,9 @@ input.search-adult, input.search-children {
   box-shadow: 0 2px 1px 0 gray;
   cursor: pointer;
 }
-
+.range-controls .toggle:hover {
+  transform: scale(1.2);
+}
 .range-controls .toggle-max {
   left: 252px;
 }
@@ -775,8 +828,15 @@ input.search-adult, input.search-children {
   background: none;
   border: 2px solid;
   cursor: pointer;
+  border-radius: 2px;
+  outline: none;
 }
-
+.parametrs-form__container-cost__button:hover,
+.parametrs-form__container-cost__button:focus {
+  color: var(--black);
+background-color: var(--white);
+border: none;
+}
 .result-block {
   background-color: var(--white);
 }
@@ -818,10 +878,6 @@ input.search-adult, input.search-children {
   margin-right: 5px;
 }
 
-/* .result-block-sorting__item p {
-  margin: 0 9px 0 16px;
-  font-size: 12px;
-} */
 
 .arrow-up {
   margin-left: auto;
@@ -831,7 +887,17 @@ input.search-adult, input.search-children {
   margin-left: 6px;
 }
 
-.result-block-sorting__item a {
+
+.no-item svg path:hover {fill: var(--black);
+cursor: pointer;}
+.no-item svg path:active {fill: var(--blue);
+  cursor: pointer;}
+.no-item button {outline: none;}
+
+
+
+.result-block-sorting__item a
+{
   color: #b3b3b3;
   text-transform: uppercase;
   margin-left: 0;
@@ -839,11 +905,14 @@ input.search-adult, input.search-children {
   border-bottom: 1px dashed #81B3D2;
 }
 
-ul .result-block-sorting__item:first-child a {
+.result-block-sorting__item .active {
   color: var(--blue);
   border-bottom: none;
 }
-
+.result-block-sorting__item a:hover,
+.result-block-sorting__item a:focus {color: var(--blue);}
+.result-block-sorting__item a:active {color: var(--black);
+  border-bottom: none}
 .no-item {
   height: 36px;
 }
@@ -891,11 +960,13 @@ ul .result-block-sorting__item:first-child a {
   margin: -4px 0 10px 0;
 }
 
-.result-block__item__block-description p {
-  margin: 0;
-  width: 110px;
+.result-block__item__block-description h3:hover {
+  color: var(--blue);
 }
-
+.result-block__item__block-description h3:active {
+  color: #000000;
+  opacity: 0.3;
+}
 .result-block__item__block-rating__star__text {
   margin: 47px 0 -8px;
   background-color: #F2F2F2;
@@ -929,14 +1000,36 @@ ul .result-block-sorting__item:first-child a {
   padding: 3px 17px;
   font-weight: bold;
   margin-right: 2px;
+  outline: none;
+  border-radius: 0;
+  cursor: pointer;
 }
 
 .result-block__item__block-description button {
   background-color: var(--blue);
 }
+.result-block__item__block-description button:hover {
+  background-color: #669EC0;
+}
+.result-block__item__block-description button:active {
+  background-color: #5496BD;
 
+}
+.result-block__item__block-description button:active span {
+  opacity: 0.3;
+}
 .result-block__item__block-description button:last-child {
   background-color: var(--brown);
+}
+.result-block__item__block-description button:last-child:hover {
+  background-color: #604E43;
+}
+
+.result-block__item__block-description button:last-child:active {
+  background-color: #503E33;
+}
+.result-block__item__block-description button:last-child:active span {
+  opacity: 0.3;
 }
 
 .main-footer__catalog {
