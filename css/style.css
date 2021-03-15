@@ -96,7 +96,7 @@ a {
   text-decoration: none;
 }
 
-h3 {
+.title-h3 {
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
@@ -105,7 +105,7 @@ h3 {
   text-align: center;
 }
 
-h4 {
+.title-h4 {
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
@@ -113,7 +113,7 @@ h4 {
   text-align: center;
 }
 
-p {
+.p_text {
   text-transform: uppercase;
 }
 
@@ -196,6 +196,7 @@ p {
   background-image: url(../img/background-photo-index.jpg);
   background-repeat: no-repeat;
   padding-top: 76px;
+  background-color: lavender;
 }
 
 .preview-img img {
@@ -249,8 +250,11 @@ p {
   padding: 0;
   background-color: var(--white)
 }
-.search-form-block__wrapper--children {padding-top: 4px;
-  padding-bottom: 2px;}
+
+.search-form-block__wrapper--children {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
 
 .description-item {
   display: flex;
@@ -280,6 +284,7 @@ p {
 
 .description-item-block_img {
   line-height: 0%;
+  background-color: lavender;
 }
 
 .description-list-list-two {
@@ -309,7 +314,6 @@ p {
   height: 72px;
   background-image: url(../img/icon-1.svg);
   top: 1096px;
-
 }
 
 .feature-item--burger::before {
@@ -526,8 +530,10 @@ p {
   background-color: var(--white);
   bottom: 0px;
   left: 0;
+  transform: translateY(100%);
   box-shadow: 0px 7px 15px rgb(0 1 1 / 15%);
-  z-index: -1;
+  z-index: 1;
+  /* !!! так сделал для выолнения критерия Д20, она должна быть невидимой */
 }
 
 .search-form--open {
@@ -545,14 +551,17 @@ p {
   margin-bottom: 29px;
 }
 
-.search-form-block__wrapper .adult{
+.search-form-block__wrapper .adult {
   display: flex;
   position: relative;
   margin-right: 6px;
 }
-.search-form-block__wrapper .children{ display: flex;
+
+.search-form-block__wrapper .children {
+  display: flex;
   position: relative;
- }
+}
+
 .adult .search-adult, .children .search-children {
   text-align: center;
   padding-top: 3px;
@@ -573,8 +582,7 @@ p {
   border-radius: 2px;
 }
 
-.adult .button--minus,
-.ch .button--minus {
+.adult .button--minus, .ch .button--minus {
   top: 4px;
 }
 
@@ -600,21 +608,29 @@ p {
   right: 85px;
   outline: none;
 }
-.search-label {text-align: initial;  margin-top: 7px;}
+
+.search-label {
+  text-align: initial;
+  margin-top: 7px;
+}
+
 .adult .plus, .children .plus {
   position: absolute;
   top: 11px;
   right: 9px;
   outline: none;
 }
+
 .search-form-block label {
-  display: inline-block;
+  display: inline-flex;
   width: 100px;
   margin-right: 12px;
   margin-top: 4px;
 }
 
-.children .button--plus {top: 8px;}
+.children .button--plus {
+  top: 8px;
+}
 
 .children label {
   padding-left: 47px;
@@ -634,7 +650,7 @@ p {
 }
 
 input.search-date-in, input.search-date-out {
-  display: inline-block;
+  display: inline-flex;
   width: 346px;
   background-color: var(--extra-light-gray);
   border: 2px solid transparent;
@@ -659,8 +675,15 @@ input.search-adult, input.search-children {
   border: none;
   padding: 0;
 }
-.adult .button--plus {top: 8px;}
-.adult .search-label {text-align: initial;}
+
+.adult .button--plus {
+  top: 8px;
+}
+
+.adult .search-label {
+  text-align: initial;
+}
+
 .text {
   font-weight: bold;
   font-size: 14px;
@@ -961,7 +984,7 @@ input.search-adult, input.search-children {
   outline: none;
 }
 
-.result-block-sorting__item a {
+.result-block-sorting__item .exile {
   color: #b3b3b3;
   text-transform: uppercase;
   margin-left: 0;
@@ -974,11 +997,11 @@ input.search-adult, input.search-children {
   border-bottom: none;
 }
 
-.result-block-sorting__item a:hover, .result-block-sorting__item a:focus {
+.result-block-sorting__item .exile:hover, .result-block-sorting__item .exile:focus {
   color: var(--blue);
 }
 
-.result-block-sorting__item a:active {
+.result-block-sorting__item .exile:active {
   color: var(--black);
   border-bottom: none
 }
@@ -1023,6 +1046,7 @@ input.search-adult, input.search-children {
   object-fit: contain;
   height: min-content;
   margin-right: 29px;
+  background-color: lavender;
 }
 
 .result-block__item__block-description-title {
