@@ -206,7 +206,7 @@ a {
 
 .preview-img::after {
   content: "";
-  background-image: url(../img/Shape.svg);
+  background-image: url(../img/shapee.svg);
   height: 57px;
   width: 1200px;
   display: block;
@@ -673,7 +673,7 @@ input.search-date-in:focus, input.search-date-out:focus {
 }
 
 input.search-adult, input.search-children {
-  display: inline-block;
+  display: inline-flex;
   width: 114px;
   background-color: var(--extra-light-gray);
   border: none;
