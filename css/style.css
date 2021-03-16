@@ -412,6 +412,10 @@ a {
   ;
 }
 
+.map iframe {
+  border: 0;
+}
+
 /* Footer */
 
 .main-footer {
