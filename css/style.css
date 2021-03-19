@@ -553,6 +553,7 @@ a {
   z-index: -1;
 }
 
+
 .search-form--hidden .search-form__wrapper {
   transform: translateY(-100%);
 }
