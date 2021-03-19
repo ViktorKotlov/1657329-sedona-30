@@ -368,6 +368,9 @@ a {
   background-color: var(--white);
 }
 
+
+
+
 .block-search__title {
   font-size: 30px;
   font-weight: bold;
@@ -529,21 +532,29 @@ a {
 
 .search-form {
   position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.search-form__wrapper {
   display: flex;
   width: 568px;
   height: max-content;
   background-color: var(--white);
-  bottom: 0px;
-  left: 50%  ;
-  transform: translate(-50%, 100%);
-  box-shadow: 0px 7px 15px rgb(0 1 1 / 15%);
-  z-index: 1;
-  /* !!! так сделал для выолнения критерия Д20, она должна быть невидимой */
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  transition: transform 1s ease;
+  z-index: -11;
 }
 
-.search-form--open {
-  transform: translateY(100%);
-  z-index: 1;
+.search-form--hidden {
+  z-index: -1;
+}
+
+.search-form--hidden .search-form__wrapper {
+  transform: translateY(-100%);
 }
 
 .search-form .search-form-block {
